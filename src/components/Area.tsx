@@ -346,6 +346,7 @@ const Area = () => {
 
     return (
         <div className="p-2">
+            <h4 className="text-lg">Select object</h4>
             <select
                 name="choices"
                 id="choices"
@@ -358,6 +359,7 @@ const Area = () => {
                     </option>
                 ))}
             </select>
+
             <div className="w-full md:w-[800px] h-full p-2 bg-slate-100">
                 {renderInputs()?.map((inp, i) => (
                     <div key={i} className="flex flex-col">

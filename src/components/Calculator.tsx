@@ -25,7 +25,7 @@ const buttons: Number[] = [
     },
     {
         id: 6,
-        name: '-+',
+        name: 'CE',
     },
     {
         id: 7,
@@ -200,6 +200,10 @@ const Calculator = () => {
             setRes('');
             return;
         }
+        if (opp === 'CE') {
+            setEquation(equation.slice(0, equation.length - 1));
+            return;
+        }
         setEquation((pv) => (pv += opp));
     };
 
@@ -226,6 +230,9 @@ const Calculator = () => {
                                 'text-2xl bg-blue-400 text-white hover:bg-blue-300'
                             } ${
                                 btn.name === 'C' &&
+                                'bg-red-400 font-bold text-2xl hover:bg-red-300'
+                            } ${
+                                btn.name === 'CE' &&
                                 'bg-red-400 font-bold text-2xl hover:bg-red-300'
                             } ${
                                 colorSet2(btn) && 'bg-sky-300 hover:bg-sky-200'

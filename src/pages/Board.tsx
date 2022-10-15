@@ -1,8 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Outlet, useNavigate, useLocation } from 'react-router-dom';
 
 const Board = () => {
-    const [darkmode, setDarkmode] = useState(true);
     const navigate = useNavigate();
     const { pathname } = useLocation();
 
@@ -18,7 +17,7 @@ const Board = () => {
             <div className="container mx-auto">
                 {pathname !== '/' && (
                     <p
-                        className="my-2 uppercase cursor-pointer hover:underline"
+                        className="my-2 pl-4 uppercase cursor-pointer hover:underline"
                         onClick={() => navigate('/')}
                     >
                         home

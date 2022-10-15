@@ -48,7 +48,7 @@ const Home = () => {
                     units converter
                 </h1>
                 <div
-                    className="w-[60px] h-[30px] rounded-full cursor-pointer bg-slate-200 transition-all relative"
+                    className="w-[50px] h-[20px] rounded-full cursor-pointer bg-slate-200 transition-all relative"
                     // onClick={() => setDarkmode((pv) => !pv)}
                 >
                     {!false ? (
