@@ -143,17 +143,18 @@ const solve = (eq: string): string => {
             newEquationArray.splice(ind, 1);
             newEquationArray.splice(ind, 1);
             newEquationArray.splice(ind - 1, 1);
-            if (op === '/')
-                newEquationArray.splice(
-                    ind - 1,
-                    0,
-                    String(Number(pv) / Number(nv))
-                );
-            else if (op === '*')
+
+            if (op === '*')
                 newEquationArray.splice(
                     ind - 1,
                     0,
                     String(Number(pv) * Number(nv))
+                );
+            else if (op === '/')
+                newEquationArray.splice(
+                    ind - 1,
+                    0,
+                    String(Number(pv) / Number(nv))
                 );
             else if (op === '-')
                 newEquationArray.splice(

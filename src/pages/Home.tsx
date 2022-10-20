@@ -10,7 +10,7 @@ const categories = [
     },
     {
         _id: 2,
-        title: 'Volume',
+        title: '3d Geometries',
         desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat iusto soluta rerum.',
         route: 'volume',
     },
@@ -22,7 +22,7 @@ const categories = [
     },
     {
         _id: 4,
-        title: 'Area',
+        title: '2d Geometries',
         desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat iusto soluta rerum.',
         route: 'area',
     },

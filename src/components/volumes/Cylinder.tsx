@@ -79,7 +79,6 @@ const Cylinder = () => {
         switch (currentProp) {
             case 'radius':
                 setRadius(String(Math.sqrt(Number(baseArea) / Math.PI)));
-                console.log(radius);
                 return;
             case 'base area':
                 setBaseArea(String(Math.PI * Math.pow(Number(radius), 2)));

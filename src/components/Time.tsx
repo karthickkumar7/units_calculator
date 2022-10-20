@@ -121,6 +121,7 @@ const Time = () => {
                 setMS(String(Number(e.target.value) * 31556926000));
                 setMIN(String(Number(e.target.value) * 525600));
                 setHR(String(Number(e.target.value) * 8760));
+                setDay(String(Number(e.target.value) * 365));
                 setMON(String(Number(e.target.value) * 12));
                 setY(e.target.value);
                 return;
