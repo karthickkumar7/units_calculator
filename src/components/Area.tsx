@@ -1,4 +1,4 @@
-import React, { BaseSyntheticEvent, useEffect, useState } from 'react';
+import React, { BaseSyntheticEvent, useState } from 'react';
 
 const geometries = [
     {
@@ -60,14 +60,20 @@ const Area = () => {
         switch (e.target.id) {
             case 'area':
                 setCircle({
-                    radius: String(Math.sqrt(Number(e.target.value) / Math.PI)),
+                    radius: String(
+                        Math.sqrt(Number(e.target.value) / Math.PI).toFixed(4)
+                    ),
                     diameter: String(
-                        Math.sqrt(Number(e.target.value) / Math.PI) * 2
+                        (
+                            Math.sqrt(Number(e.target.value) / Math.PI) * 2
+                        ).toFixed(4)
                     ),
                     area: e.target.value,
                     perimeter: String(
-                        (2 * Number(e.target.value)) /
+                        (
+                            (2 * Number(e.target.value)) /
                             Math.sqrt(Number(e.target.value) / Math.PI)
+                        ).toFixed(4)
                     ),
                 });
                 return;
@@ -75,8 +81,14 @@ const Area = () => {
                 setCircle({
                     radius: e.target.value,
                     diameter: String(Number(e.target.value) * 2),
-                    area: String(Math.PI * Math.pow(Number(e.target.value), 2)),
-                    perimeter: String(2 * Math.PI * Number(e.target.value)),
+                    area: String(
+                        (Math.PI * Math.pow(Number(e.target.value), 2)).toFixed(
+                            4
+                        )
+                    ),
+                    perimeter: String(
+                        (2 * Math.PI * Number(e.target.value)).toFixed(4)
+                    ),
                 });
                 return;
             case 'diameter':
@@ -340,13 +352,9 @@ const Area = () => {
         setEllipse({ area: '', majorA: '', minorA: '' });
     };
 
-    // useEffect(() => {
-    //     console.log()
-    // },[circle])
-
     return (
         <div className="p-2">
-            <h4 className="text-lg">Select object</h4>
+            <h4 className="text-lg capitalize">select object</h4>
             <select
                 name="choices"
                 id="choices"
@@ -367,12 +375,15 @@ const Area = () => {
                             htmlFor={inp.props.id}
                             className="text-lg font-semibold"
                         >
-                            {inp.props.id}
+                            {inp.props.id}{' '}
+                            {inp.props.id === 'area' ? '(m^2)' : '(m)'}
                         </label>
                         {inp}
                     </div>
                 ))}
             </div>
+
+            {/*  for rect and triangle */}
             {(selected === 'Rectangle' || selected === 'Triangle') && (
                 <button
                     className="w-full md:w-[661px] my-4 px-4 py-3 rounded bg-green-500 text-white uppercase font-semibold"
@@ -381,6 +392,7 @@ const Area = () => {
                     calculate
                 </button>
             )}
+
             <div>
                 <button
                     className="w-full md:w-[661px] my-4 px-4 py-3 rounded bg-yellow-400 uppercase font-semibold"

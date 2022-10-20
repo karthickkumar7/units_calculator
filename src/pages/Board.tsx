@@ -16,12 +16,12 @@ const Board = () => {
         <div className="w-screen min-h-screen">
             <div className="container mx-auto">
                 {pathname !== '/' && (
-                    <p
-                        className="my-2 pl-4 uppercase cursor-pointer hover:underline"
+                    <button
+                        className="px-4 py-2 mt-2 mb-3 ml-2 rounded uppercase shadow-md text-white bg-fuchsia-600"
                         onClick={() => navigate('/')}
                     >
                         home
-                    </p>
+                    </button>
                 )}
                 <Outlet />
             </div>
