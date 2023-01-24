@@ -1,4 +1,4 @@
-import React, { BaseSyntheticEvent, useState } from 'react';
+import { BaseSyntheticEvent, useState } from 'react';
 import Cone from './volumes/Cone';
 import Cuboid from './volumes/Cuboid';
 import Cylinder from './volumes/Cylinder';
@@ -25,31 +25,31 @@ const units = [
 
 const Volume = () => {
     const [currentComponent, setCurrentComponent] = useState('sphere');
-    const [shpere, setShpere] = useState({
-        raduis: '',
-        diameter: '',
-        surfaceArea: '',
-        volume: '',
-    });
-    const [cuboid, setCuboid] = useState({
-        width: '',
-        length: '',
-        height: '',
-        diagonal: '',
-        surfaceArea: '',
-        volume: '',
-    });
-    const [cone, setCone] = useState({
-        radius: '',
-        height: '',
-        slantHeight: '',
-        surfaceArea: '',
-        volume: '',
-        baseArea: '',
-        lateralSurfaceArea: '',
-    });
+    // const [shpere, setShpere] = useState({
+    //     raduis: '',
+    //     diameter: '',
+    //     surfaceArea: '',
+    //     volume: '',
+    // });
+    // const [cuboid, setCuboid] = useState({
+    //     width: '',
+    //     length: '',
+    //     height: '',
+    //     diagonal: '',
+    //     surfaceArea: '',
+    //     volume: '',
+    // });
+    // const [cone, setCone] = useState({
+    //     radius: '',
+    //     height: '',
+    //     slantHeight: '',
+    //     surfaceArea: '',
+    //     volume: '',
+    //     baseArea: '',
+    //     lateralSurfaceArea: '',
+    // });
 
-    const [cylinder, setCylinder] = useState({});
+    // const [cylinder, setCylinder] = useState({});
 
     const setUnitComponentMapHandler = (e: BaseSyntheticEvent) => {
         switch (e.target.value) {
