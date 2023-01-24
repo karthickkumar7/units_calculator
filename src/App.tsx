@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// import { ThemeContext, CreateContext } from './context/themeContext';
 
 import Board from './pages/Board';
 import Home from './pages/Home';
@@ -11,6 +13,8 @@ import Time from './components/Time';
 import Test from './components/Test';
 
 const App = () => {
+    const [darkMode, setDarkMode] = useState(false);
+
     return (
         <BrowserRouter>
             <Routes>

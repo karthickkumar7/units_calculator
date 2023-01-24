@@ -5,37 +5,37 @@ const categories = [
     {
         _id: 1,
         title: 'Temperature',
-        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat iusto soluta rerum.',
+        desc: 'convert tempearture units from celcius, kelvin and farenheit',
         route: 'temperature',
     },
     {
         _id: 2,
         title: '3d Geometries',
-        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat iusto soluta rerum.',
+        desc: 'calculate the radius, diameter, surafce area, volume, etc of 3d objects such as shpere, cuboid, cone and cylinder',
         route: 'volume',
     },
     {
         _id: 3,
         title: 'Length',
-        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat iusto soluta rerum.',
+        desc: 'convert lengths in multiple units in SI and imperial standards such as meter, mile, yard, feet, etc',
         route: 'length',
     },
     {
         _id: 4,
         title: '2d Geometries',
-        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat iusto soluta rerum.',
+        desc: 'calculate the radius, area, perimeter, length and other dimensions of the 2d objects suck as circle, triangle, rectangle and elipse',
         route: 'area',
     },
     {
         _id: 5,
         title: 'Calculator',
-        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat iusto soluta rerum.',
+        desc: 'calculator to perform simple calculations',
         route: 'calculator',
     },
     {
         _id: 6,
         title: 'Time',
-        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat iusto soluta rerum.',
+        desc: 'convert units of time from and to seconds, minutes, hours, months, years, etc',
         route: 'time',
     },
 ];
@@ -47,16 +47,6 @@ const Home = () => {
                 <h1 className="uppercase text-center text-2xl font-semibold text-green-600">
                     units converter
                 </h1>
-                <div
-                    className="w-[50px] h-[20px] rounded-full cursor-pointer bg-slate-200 transition-all relative"
-                    // onClick={() => setDarkmode((pv) => !pv)}
-                >
-                    {!false ? (
-                        <div className="w-1/2 h-full rounded-full bg-blue-600 duration-200 absolute left-0"></div>
-                    ) : (
-                        <div className="w-1/2 h-full rounded-full bg-blue-600 duration-200 absolute right-0"></div>
-                    )}
-                </div>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {categories.map((cat) => (

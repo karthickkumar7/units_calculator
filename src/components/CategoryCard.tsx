@@ -13,7 +13,9 @@ const CategoryCard = (props: Category) => {
     return (
         <section className="border px-4 py-3 rounded hover:shadow">
             <h4 className="text-lg font-semibold">{props.title}</h4>
-            <p className="my-2 text-sm text-slate-500">{props.desc}</p>
+            <p className="my-2 text-sm capitalize text-slate-500">
+                {props.desc}
+            </p>
             <button
                 className="w-[200px] py-2 rounded uppercase font-semibold to-white text-white"
                 style={{

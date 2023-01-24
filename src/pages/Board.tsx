@@ -23,6 +23,7 @@ const Board = () => {
                         home
                     </button>
                 )}
+
                 <Outlet />
             </div>
         </div>
